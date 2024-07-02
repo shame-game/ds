@@ -277,7 +277,7 @@ button:focus,
 }
 
 .section_title h2 span {
-    color: var(--purple);
+    color: #284f9e;
 }
 
 .row_am {
@@ -512,9 +512,6 @@ header.fixed .navbar {
     color: var(--text-white);
 }
 
-.navbar-expand-lg .navbar-nav .nav-link:hover {
-    color: var(--white);
-}
 
 .navbar-expand-lg .navbar-nav .nav-link.dark_btn {
     color: var(--purple);
@@ -559,8 +556,35 @@ header.fixed .navbar {
     display: flex;
     align-items: center;
     position: relative;
-    border-radius: 10px 10px 0 0;
+    border-radius: 3px;
     transition: .4s all;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-radius: 3px;
+    transition: .4s all;
+}
+
+.nav-item.ac {
+    background-color: var(--bg-white);
+    box-shadow: 0px 4px 10px #c5c5c580;
+    ;
+}
+
+.nav-item:hover {
+    background-color: var(--bg-white);
+    box-shadow: 0px 4px 10px #c5c5c580;
+}
+
+.nav-item:hover .nav-link {
+    color: #284f9e;
+}
+
+.nav-item.ac .nav-link {
+    color: #284f9e;
 }
 
 .navbar-expand-lg .navbar-nav .has_dropdown:hover {
@@ -578,7 +602,7 @@ header.fixed .navbar {
     position: absolute;
     top: 100%;
     background-color: var(--bg-white);
-    border-radius: 0 10px 10px 10px;
+    border-radius: 5px;
     min-width: 210px;
     max-width: 230px;
     margin-top: -10px;
@@ -1008,7 +1032,7 @@ iframe#youtubevideo {
     aspect-ratio: 3/ 4;
     width: 100%;
     overflow: hidden;
-    border: thin solid black;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
@@ -1020,6 +1044,7 @@ iframe#youtubevideo {
 
 .nameteacher p {
     font-weight: 600;
+    margin: 5px 0;
 }
 
 .interface_section .owl-item .screen_frame_img .item img {
@@ -1642,7 +1667,8 @@ iframe#youtubevideo {
     text-align: center;
     background-color: var(--bg-white);
     min-height: 400px;
-    border-radius: 12px;
+    border-radius: 5px;
+    overflow: hidden;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
@@ -1758,7 +1784,7 @@ iframe#youtubevideo {
 
 .faq_section .faq_panel .card-header .btn {
     padding: 0;
-    color: var(--dark-purple);
+    color: rgb(61, 61, 61);
     font-weight: 600;
     font-size: 20px;
 }
@@ -1956,9 +1982,18 @@ iframe#youtubevideo {
     margin-bottom: 15px;
     font-weight: 600;
     display: -webkit-box;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
     overflow: hidden;
+    text-align: start;
+}
+
+.latest_story .story_box .story_text p {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-align: justify;
 }
 
 /* latest story link text */
@@ -2087,13 +2122,12 @@ footer {
 }
 
 footer .top_footer {
-    background-image: url(../images/footer_bg.png);
     /*background: var(--purple);*/
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-color: #583BD3;
-    padding: 180px 0 60px 0;
+    background-color: #284f9e;
+    padding: 50px 0;
     position: relative;
     overflow: hidden;
 
@@ -2101,7 +2135,7 @@ footer .top_footer {
 
 /* footer logo */
 footer .top_footer .logo {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
 footer .top_footer .logo img {
@@ -2144,12 +2178,11 @@ footer .top_footer .try_out {
 footer .app_btn li a {
     display: block;
     padding: 12px 10px;
-    background-color: var(--bg-white);
-    border: 2px solid var(--purple);
+    width: max-content;
+    height: max-content;
     position: relative;
     border-radius: 12px;
     transition: .4s all;
-    width: 175px;
     text-align: center;
 }
 
@@ -2164,7 +2197,7 @@ footer .app_btn li:last-child {
 }
 
 footer .bottom_footer {
-    background-color: var(--bg-purple);
+    background-color: #284f9e;
 }
 
 /* footer heading and text colors variable */
@@ -2195,7 +2228,7 @@ footer .links ul li a {
 /* footer last */
 footer .bottom_footer {
     padding: 20px 0;
-    border-top: #5539cc solid 1px;
+    border-top: thin solid white;
 }
 
 footer .bottom_footer p {
@@ -2548,7 +2581,7 @@ footer .top_footer .anim_line span:nth-child(2) {
 
 /* Bredcrumb Css Start */
 .bred_crumb {
-    background-image: url(../images/bread_crumb_bg.png);
+    background: #284f9e;
     /*background: var(--purple);*/
     background-repeat: no-repeat;
     background-size: cover;
