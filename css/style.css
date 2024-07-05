@@ -742,7 +742,7 @@ header.fixed .navbar {
     margin-top: 0px;
     padding-top: 200px;
     position: relative;
-    background-image: url(https://lh3.googleusercontent.com/d/1hsQ50Aq9-0kSVFS6Xd-KiNqRv5MQ74E7);
+    background-image: url(https://lh3.googleusercontent.com/d/1pfcO_9JgWwO58CmgSnQG860qMY-LsIk_);
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
@@ -1233,12 +1233,17 @@ iframe#youtubevideo {
 
 .about_app_section .about_text .app_statstic li .icon {
     margin-right: 9px;
+    width: 75px;
 }
 
 .about_app_section .about_text .app_statstic li p {
     margin-bottom: 0;
     line-height: 1;
     color: var(--dark-purple);
+}
+
+.about_app_section .about_text .app_statstic li .icon img {
+    width: 100%;
 }
 
 .about_app_section .about_text .app_statstic li p:first-child {
@@ -1334,7 +1339,7 @@ iframe#youtubevideo {
 
 .modern_ui_section .ui_images .right_img img:nth-child(1) {
     position: relative;
-    top: 15px;
+    top: 55px;
     z-index: 99;
     margin-left: -15px;
 }
@@ -2385,7 +2390,7 @@ footer .top_footer .anim_line span:nth-child(2) {
 }
 
 .modern_ui_section .ui_images .right_img img:nth-child(1) {
-    animation-delay: 3s;
+    animation-delay: 1s;
 }
 
 @keyframes moving_object {
@@ -2404,15 +2409,15 @@ footer .top_footer .anim_line span:nth-child(2) {
 
 @keyframes moving_position_animatin {
     0% {
-        transform: translateY(0);
+        transform: translateY(-50px);
     }
 
     50% {
-        transform: translateY(-30px);
+        transform: translateY(-80px);
     }
 
     100% {
-        transform: translateY(0);
+        transform: translateY(-50px);
     }
 }
 
