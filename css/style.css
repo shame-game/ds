@@ -548,7 +548,7 @@ header.fixed .navbar {
 }
 
 .navbar-brand img {
-    width: 100px;
+    width: 150px;
 }
 
 /* navigation bar dropdown */
@@ -1097,13 +1097,13 @@ iframe#youtubevideo {
 /* features section image */
 .features_section .feature_detail .feature_img {
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 40%;
+    transform: translateX(-40%);
     top: 0px;
 }
 
 .features_section .feature_detail .feature_img img {
-    max-width: 100%;
+    max-width: 118%;
 }
 
 /* features section box */
@@ -1855,7 +1855,7 @@ iframe#youtubevideo {
 }
 
 .free_app_section .container .free_app_inner {
-    background-color: var(--bg-purple);
+    background-color: white;
     border-radius: 30px;
     padding: 20px 100px;
     padding-bottom: 50px;
@@ -1887,7 +1887,7 @@ iframe#youtubevideo {
 
 .free_app_section .container .free_app_inner .free_text .section_title h2,
 .free_app_section .container .free_app_inner .free_text .section_title p {
-    color: var(--text-white);
+    color: #113899
 }
 
 .free_app_section .container .free_app_inner .free_text .app_btn {
@@ -1918,7 +1918,7 @@ iframe#youtubevideo {
 .free_app_section .container .free_app_inner .free_img {
     display: flex;
     align-items: center;
-    margin-top: -120px;
+    margin-top: 10px;
 }
 
 
