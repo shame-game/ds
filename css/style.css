@@ -548,7 +548,7 @@ header.fixed .navbar {
 }
 
 .navbar-brand img {
-    width: 150px;
+   height: 50px;
 }
 
 /* navigation bar dropdown */
@@ -1097,7 +1097,7 @@ iframe#youtubevideo {
 /* features section image */
 .features_section .feature_detail .feature_img {
     position: absolute;
-    left: 40%;
+    left: 50%;
     transform: translateX(-40%);
     top: 0px;
 }
@@ -1181,20 +1181,22 @@ iframe#youtubevideo {
 
 /* about us section images*/
 .about_app_section .about_img img {
-    max-width: 100%;
+    max-width: 60%;
 }
 
 .about_app_section .about_img::before {
     content: "";
     position: absolute;
     left: 38%;
-    top: 50%;
+    top: 60%;
     transform: translate(-50%, -50%);
     width: 500px;
     height: 500px;
     background-color: var(--bg-white);
     border-radius: 100%;
     z-index: -1;
+    background-size: cover;
+    background-image: url(https://lh3.googleusercontent.com/d/14KU1lS6HDLNBh5Ov0zt9g2nH1HXT1TvI)
 }
 
 .about_app_section .about_img .screen_img {
@@ -1342,6 +1344,7 @@ iframe#youtubevideo {
     top: 55px;
     z-index: 99;
     margin-left: -15px;
+    border-radius: 8px;
 }
 
 
@@ -1950,6 +1953,8 @@ iframe#youtubevideo {
     text-align: center;
     border-radius: 10px;
     box-shadow: 0px 4px 30px #EDE9FE;
+    opacity: 1 !important;
+    transform: translate3d(0, 0px, 0) !important;
 }
 
 /* latest story image */
@@ -3106,6 +3111,10 @@ footer .top_footer .anim_line span:nth-child(2) {
 
 .blog_detail_section .blog_inner_pannel .main_img {
     margin-bottom: 30px;
+}
+
+.main_img img {
+    width: 100%;
 }
 
 .blog_detail_section .blog_inner_pannel .info h3 {
