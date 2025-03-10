@@ -3,6 +3,67 @@ $('.drp_btn').click(function () {
   $(this).siblings('.sub_menu').slideToggle();
 })
 
+$(document).ready(function () {
+  var navLinks = $(".navbar-nav a");
+  var sections = [];
+
+  // Xây dựng mảng chứa thông tin section từ các link
+  navLinks.each(function () {
+    var href = $(this).attr("href");
+    if (href === "#") {
+      // Nếu là trang chủ, ta xử lý riêng (đặt offset = 0 hoặc gán element cho section "home" nếu có)
+      sections.push({
+        id: "home",
+        element: null,  // Nếu có phần tử với id="home" thì thay null bằng $("#home")
+        offset: 0,
+        link: $(this)
+      });
+    } else {
+      var sectionEl = $(href);
+      if (sectionEl.length) {
+        sections.push({
+          id: href.substring(1), // loại bỏ dấu '#' để lấy id
+          element: sectionEl,
+          offset: sectionEl.offset().top,
+          link: $(this)
+        });
+      }
+    }
+  });
+
+  // Hàm cập nhật lại vị trí của các section (dùng khi cửa sổ resize)
+  function updateOffsets() {
+    sections.forEach(function (sec) {
+      if (sec.element) {
+        sec.offset = sec.element.offset().top;
+      }
+    });
+  }
+  updateOffsets();
+  $(window).on("resize", updateOffsets);
+
+  // Sự kiện scroll
+  $(window).on("scroll", function () {
+    var scrollTop = $(this).scrollTop();
+    var activeId = "home"; // mặc định nếu đang ở đầu trang
+
+    // Duyệt qua các section để tìm section hiện tại (sử dụng ngưỡng offset là 150px, có thể điều chỉnh)
+    for (var i = 0; i < sections.length; i++) {
+      if (scrollTop >= sections[i].offset - 150) {
+        activeId = sections[i].id;
+      }
+    }
+
+    // Loại bỏ class "ac" khỏi tất cả các menu và cập nhật lại cho phần tử tương ứng
+    $(".navbar-nav li").removeClass("ac");
+    if (activeId === "home") {
+      $(".navbar-nav a[href='#']").parent().addClass("ac");
+    } else {
+      $(".navbar-nav a[href='#" + activeId + "']").parent().addClass("ac");
+    }
+  });
+});
+
 // Preloader JS
 
 function preloader_fade() {
@@ -180,10 +241,10 @@ $('#screen_slider').owlCarousel({
       items: 1
     },
     600: {
-      items: 3
+      items: 2
     },
     1000: {
-      items: 5
+      items: 3
     }
   }
 })
